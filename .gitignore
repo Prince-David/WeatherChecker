@@ -12,6 +12,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+*.xcuserstate
 Config.plist
 
 # Objective-C/Swift specific
