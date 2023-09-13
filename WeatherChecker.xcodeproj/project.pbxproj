@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0356D3DC2AB1BB7F00E5E27B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0356D3DB2AB1BB7F00E5E27B /* Config.plist */; };
 		03A86F7E2AB1A461008CCAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */; };
 		03A86F802AB1A461008CCAF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */; };
 		03A86F822AB1A461008CCAF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F812AB1A461008CCAF7 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0356D3DB2AB1BB7F00E5E27B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		03A86F7A2AB1A461008CCAF7 /* WeatherChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				03A86F862AB1A462008CCAF7 /* Assets.xcassets */,
 				03A86F882AB1A462008CCAF7 /* LaunchScreen.storyboard */,
 				03A86F8B2AB1A462008CCAF7 /* Info.plist */,
+				0356D3DB2AB1BB7F00E5E27B /* Config.plist */,
 			);
 			path = WeatherChecker;
 			sourceTree = "<group>";
@@ -80,7 +83,6 @@
 				C0CA0BB813E12ED418A76ADC /* Pods-WeatherChecker.debug.xcconfig */,
 				DFBC34D7F2E1EA12D7DAD806 /* Pods-WeatherChecker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0356D3DC2AB1BB7F00E5E27B /* Config.plist in Resources */,
 				03A86F8A2AB1A462008CCAF7 /* LaunchScreen.storyboard in Resources */,
 				03A86F872AB1A462008CCAF7 /* Assets.xcassets in Resources */,
 				03A86F852AB1A461008CCAF7 /* Main.storyboard in Resources */,
