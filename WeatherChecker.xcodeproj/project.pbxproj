@@ -44,6 +44,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0313AD632AB1DFD500C30CFE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */,
+				03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0313AD642AB1DFE000C30CFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0313AD652AB1DFE700C30CFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03A86F812AB1A461008CCAF7 /* ViewController.swift */,
+				03A86F832AB1A461008CCAF7 /* Main.storyboard */,
+				03A86F882AB1A462008CCAF7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0313AD662AB1DFEC00C30CFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0313AD682AB1E0C900C30CFE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03A86F862AB1A462008CCAF7 /* Assets.xcassets */,
+				0356D3DB2AB1BB7F00E5E27B /* Config.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		03A86F712AB1A461008CCAF7 = {
 			isa = PBXGroup;
 			children = (
@@ -65,14 +107,12 @@
 		03A86F7C2AB1A461008CCAF7 /* WeatherChecker */ = {
 			isa = PBXGroup;
 			children = (
-				03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */,
-				03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */,
-				03A86F812AB1A461008CCAF7 /* ViewController.swift */,
-				03A86F832AB1A461008CCAF7 /* Main.storyboard */,
-				03A86F862AB1A462008CCAF7 /* Assets.xcassets */,
-				03A86F882AB1A462008CCAF7 /* LaunchScreen.storyboard */,
+				0313AD682AB1E0C900C30CFE /* Resources */,
+				0313AD642AB1DFE000C30CFE /* Model */,
+				0313AD652AB1DFE700C30CFE /* View */,
+				0313AD662AB1DFEC00C30CFE /* ViewModel */,
+				0313AD632AB1DFD500C30CFE /* App */,
 				03A86F8B2AB1A462008CCAF7 /* Info.plist */,
-				0356D3DB2AB1BB7F00E5E27B /* Config.plist */,
 			);
 			path = WeatherChecker;
 			sourceTree = "<group>";
