@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0313AD702AB2A4E500C30CFE /* WeatherCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD6F2AB2A4E500C30CFE /* WeatherCheckerTests.swift */; };
 		0356D3DC2AB1BB7F00E5E27B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0356D3DB2AB1BB7F00E5E27B /* Config.plist */; };
 		03A86F7E2AB1A461008CCAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */; };
 		03A86F802AB1A461008CCAF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */; };
@@ -17,7 +18,19 @@
 		F923216DC48AE33F27BC33C7 /* Pods_WeatherChecker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3097A2C66A386A7B271AF6 /* Pods_WeatherChecker.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0313AD712AB2A4E500C30CFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A86F722AB1A461008CCAF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A86F792AB1A461008CCAF7;
+			remoteInfo = WeatherChecker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0313AD6D2AB2A4E400C30CFE /* WeatherCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0313AD6F2AB2A4E500C30CFE /* WeatherCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCheckerTests.swift; sourceTree = "<group>"; };
 		0356D3DB2AB1BB7F00E5E27B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		03A86F7A2AB1A461008CCAF7 /* WeatherChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +46,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0313AD6A2AB2A4E400C30CFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03A86F772AB1A461008CCAF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,10 +106,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		0313AD6E2AB2A4E500C30CFE /* WeatherCheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0313AD6F2AB2A4E500C30CFE /* WeatherCheckerTests.swift */,
+			);
+			path = WeatherCheckerTests;
+			sourceTree = "<group>";
+		};
 		03A86F712AB1A461008CCAF7 = {
 			isa = PBXGroup;
 			children = (
 				03A86F7C2AB1A461008CCAF7 /* WeatherChecker */,
+				0313AD6E2AB2A4E500C30CFE /* WeatherCheckerTests */,
 				03A86F7B2AB1A461008CCAF7 /* Products */,
 				8ACAE1A28C6E45C126DC0F67 /* Pods */,
 				D02AAA26A544E9556DA3F107 /* Frameworks */,
@@ -100,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				03A86F7A2AB1A461008CCAF7 /* WeatherChecker.app */,
+				0313AD6D2AB2A4E400C30CFE /* WeatherCheckerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +167,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0313AD6C2AB2A4E400C30CFE /* WeatherCheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0313AD732AB2A4E500C30CFE /* Build configuration list for PBXNativeTarget "WeatherCheckerTests" */;
+			buildPhases = (
+				0313AD692AB2A4E400C30CFE /* Sources */,
+				0313AD6A2AB2A4E400C30CFE /* Frameworks */,
+				0313AD6B2AB2A4E400C30CFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0313AD722AB2A4E500C30CFE /* PBXTargetDependency */,
+			);
+			name = WeatherCheckerTests;
+			productName = WeatherCheckerTests;
+			productReference = 0313AD6D2AB2A4E400C30CFE /* WeatherCheckerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		03A86F792AB1A461008CCAF7 /* WeatherChecker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03A86F8E2AB1A462008CCAF7 /* Build configuration list for PBXNativeTarget "WeatherChecker" */;
@@ -166,6 +214,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					0313AD6C2AB2A4E400C30CFE = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 03A86F792AB1A461008CCAF7;
+					};
 					03A86F792AB1A461008CCAF7 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -185,11 +237,19 @@
 			projectRoot = "";
 			targets = (
 				03A86F792AB1A461008CCAF7 /* WeatherChecker */,
+				0313AD6C2AB2A4E400C30CFE /* WeatherCheckerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0313AD6B2AB2A4E400C30CFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03A86F782AB1A461008CCAF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +306,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0313AD692AB2A4E400C30CFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0313AD702AB2A4E500C30CFE /* WeatherCheckerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03A86F762AB1A461008CCAF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +325,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0313AD722AB2A4E500C30CFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A86F792AB1A461008CCAF7 /* WeatherChecker */;
+			targetProxy = 0313AD712AB2A4E500C30CFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03A86F832AB1A461008CCAF7 /* Main.storyboard */ = {
@@ -278,6 +354,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0313AD742AB2A4E500C30CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaoscutesoft.WeatherCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherChecker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherChecker";
+			};
+			name = Debug;
+		};
+		0313AD752AB2A4E500C30CFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaoscutesoft.WeatherCheckerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherChecker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherChecker";
+			};
+			name = Release;
+		};
 		03A86F8C2AB1A462008CCAF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -451,6 +561,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0313AD732AB2A4E500C30CFE /* Build configuration list for PBXNativeTarget "WeatherCheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0313AD742AB2A4E500C30CFE /* Debug */,
+				0313AD752AB2A4E500C30CFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		03A86F752AB1A461008CCAF7 /* Build configuration list for PBXProject "WeatherChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
