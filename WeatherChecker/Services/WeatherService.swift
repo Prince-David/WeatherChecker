@@ -15,9 +15,16 @@ enum WeatherError: Error {
     case other(Error)
 }
 
-class WeatherService {
+protocol WeatherServiceProtocol {
+    func fetchWeather(for city: String, completion: @escaping (Result<WeatherResponse, WeatherError>) -> Void)
+}
+
+class WeatherService : WeatherServiceProtocol {
     
     let baseURL = "https://api.openweathermap.org/data/2.5/weather"
+    
+    // In production we should have a backend server make the calls to openweather using the API key
+    // so it's not store in the app.
     var apiKey: String? {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist"),
            let dict = NSDictionary(contentsOfFile: path) as? [String: Any] {

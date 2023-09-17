@@ -12,6 +12,9 @@
 		0313AD792AB6053200C30CFE /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD782AB6053200C30CFE /* Main.swift */; };
 		0313AD7B2AB6056F00C30CFE /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD7A2AB6056F00C30CFE /* WeatherResponse.swift */; };
 		0313AD7E2AB605DA00C30CFE /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD7D2AB605DA00C30CFE /* WeatherService.swift */; };
+		0313AD822AB6782D00C30CFE /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD812AB6782D00C30CFE /* WeatherViewModel.swift */; };
+		0313AD842AB6799100C30CFE /* MockWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD832AB6799100C30CFE /* MockWeatherService.swift */; };
+		0313AD862AB679EA00C30CFE /* WeatherViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD852AB679EA00C30CFE /* WeatherViewModelTests.swift */; };
 		0356D3DC2AB1BB7F00E5E27B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0356D3DB2AB1BB7F00E5E27B /* Config.plist */; };
 		03A86F7E2AB1A461008CCAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */; };
 		03A86F802AB1A461008CCAF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */; };
@@ -39,6 +42,9 @@
 		0313AD782AB6053200C30CFE /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		0313AD7A2AB6056F00C30CFE /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		0313AD7D2AB605DA00C30CFE /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		0313AD812AB6782D00C30CFE /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		0313AD832AB6799100C30CFE /* MockWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherService.swift; sourceTree = "<group>"; };
+		0313AD852AB679EA00C30CFE /* WeatherViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModelTests.swift; sourceTree = "<group>"; };
 		0356D3DB2AB1BB7F00E5E27B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		03A86F7A2AB1A461008CCAF7 /* WeatherChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		0313AD662AB1DFEC00C30CFE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0313AD812AB6782D00C30CFE /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0313AD6F2AB2A4E500C30CFE /* WeatherCheckerTests.swift */,
+				0313AD852AB679EA00C30CFE /* WeatherViewModelTests.swift */,
 			);
 			path = WeatherCheckerTests;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				0313AD7D2AB605DA00C30CFE /* WeatherService.swift */,
+				0313AD832AB6799100C30CFE /* MockWeatherService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0313AD702AB2A4E500C30CFE /* WeatherCheckerTests.swift in Sources */,
+				0313AD862AB679EA00C30CFE /* WeatherViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +348,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0313AD842AB6799100C30CFE /* MockWeatherService.swift in Sources */,
 				0313AD792AB6053200C30CFE /* Main.swift in Sources */,
 				0313AD7B2AB6056F00C30CFE /* WeatherResponse.swift in Sources */,
 				0313AD772AB6051300C30CFE /* Weather.swift in Sources */,
 				03A86F822AB1A461008CCAF7 /* WeatherViewController.swift in Sources */,
 				03A86F7E2AB1A461008CCAF7 /* AppDelegate.swift in Sources */,
+				0313AD822AB6782D00C30CFE /* WeatherViewModel.swift in Sources */,
 				03A86F802AB1A461008CCAF7 /* SceneDelegate.swift in Sources */,
 				0313AD7E2AB605DA00C30CFE /* WeatherService.swift in Sources */,
 			);
