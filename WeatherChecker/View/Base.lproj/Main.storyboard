@@ -34,6 +34,9 @@
                                 <rect key="frame" x="252.00000000000003" y="109" width="77.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search"/>
+                                <connections>
+                                    <action selector="touchSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sI5-tm-dby"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-qe-qye">
                                 <rect key="frame" x="30" y="149" width="185.66666666666666" height="35"/>
@@ -49,14 +52,19 @@
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BeY-hZ-L8j"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="top" secondItem="wPZ-sx-PZO" secondAttribute="bottom" constant="5" id="F9s-t1-jAI"/>
                             <constraint firstItem="C8x-Lt-9M4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="I0o-Uk-84r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yrv-qe-qye" secondAttribute="trailing" symbolic="YES" id="NyN-IT-tRP"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SHj-iY-Gx6"/>
                             <constraint firstItem="C8x-Lt-9M4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SNu-iy-Fr8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fUk-ei-xoM" secondAttribute="trailing" symbolic="YES" id="U1H-t0-SCh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C8x-Lt-9M4" secondAttribute="trailing" symbolic="YES" id="kvq-d4-CvO"/>
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="top" secondItem="C8x-Lt-9M4" secondAttribute="bottom" constant="10" id="nuo-Ua-mPH"/>
                             <constraint firstItem="fUk-ei-xoM" firstAttribute="centerY" secondItem="wPZ-sx-PZO" secondAttribute="centerY" id="uf1-Sq-xvh"/>
                             <constraint firstItem="fUk-ei-xoM" firstAttribute="leading" secondItem="wPZ-sx-PZO" secondAttribute="trailing" constant="22" id="wgR-Xa-PVt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtCity" destination="wPZ-sx-PZO" id="nY1-hK-jET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,31 +8,31 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
-
+    
+    @IBOutlet weak var txtCity: UITextField!
+    private var viewModel: WeatherViewModel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let weatherService = WeatherService()
-
-        weatherService.fetchWeather(for: "Los Angeles") { result in
-            switch result {
-                case .success(let weather):
-                    print("Got weather: \(weather)")
-                case .failure(let error):
-                    switch error {
-                    case .networkError:
-                        print("Network error occurred.")
-                    case .decodingError:
-                        print("Failed to decode the weather data.")
-                    case .apiKeyMissing:
-                        print("API key is missing.")
-                    case .other(let originalError):
-                        print("An error occurred: \(originalError.localizedDescription)")
-                    }
-            }
+        
+        viewModel = WeatherViewModel(weatherService: WeatherService())
+        
+        viewModel.didUpdateWeather = { [weak self] in
+            print(self?.viewModel.cityName)
+            print(self?.viewModel.temperature)
+        }
+        
+        viewModel.didEncounterError = { [weak self] error in
+            print(error.localizedDescription)
         }
     }
-
-
+    
+    @IBAction func touchSearch(_ sender: Any) {
+        if let city = txtCity.text {
+            viewModel.fetchWeather(for: city)
+        }
+    }
+    
 }
 
