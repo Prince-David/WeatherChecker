@@ -41,25 +41,30 @@ final class WeatherCheckerTests: XCTestCase {
     func testWeatherResponseDecoding() {
         let jsonData = """
            {
-               "name": "New York",
-               "weather": [{
-                   "icon": "123",
-                   "description": "light rain"
-               }],
-               "main": {
-                   "temp": 33.15
-               }
+               "coord": {"lon": -73.0784, "lat": 40.8123},
+               "weather": [{"id": 804, "main": "Clouds", "description": "overcast clouds", "icon": "04d"}],
+               "base": "stations",
+               "main": {"temp": 66.78, "feels_like": 66.07, "temp_min": 64.06, "temp_max": 69.67, "pressure": 1014, "humidity": 62},
+               "visibility": 10000,
+               "wind": {"speed": 14.97, "deg": 320, "gust": 24.16},
+               "clouds": {"all": 100},
+               "dt": 1694877149,
+               "sys": {"type": 2, "id": 2001391, "country": "US", "sunrise": 1694860421, "sunset": 1694905263},
+               "timezone": -14400,
+               "id": 5120987,
+               "name": "Holbrook",
+               "cod": 200
            }
            """.data(using: .utf8)!
         
         let response = try? JSONDecoder().decode(WeatherResponse.self, from: jsonData)
         
         XCTAssertNotNil(response)
-        XCTAssertEqual(response?.main.temp, 33.15)
-        XCTAssertEqual(response?.name, "New York")
+        XCTAssertEqual(response?.main.temp, 66.78)
+        XCTAssertEqual(response?.name, "Holbrook")
         XCTAssertEqual(response?.weather.count, 1)
-        XCTAssertEqual(response?.weather[0].icon, "123")
-        XCTAssertEqual(response?.weather[0].description, "light rain")
+        XCTAssertEqual(response?.weather[0].icon, "04d")
+        XCTAssertEqual(response?.weather[0].description, "overcast clouds")
     }
     
 }
