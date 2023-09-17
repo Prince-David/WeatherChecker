@@ -20,12 +20,12 @@ class WeatherViewModelTests: XCTestCase {
     }
 
     func testFetchWeatherSuccess() {
-        let weatherResponse = WeatherResponse(name: "Test City", main: Main(temp: 25.0), weather: [Weather(description: "Clear Sky", icon: "01d")])
+        let weatherResponse = WeatherResponse(name: "New City", main: Main(temp: 25.0), weather: [Weather(description: "Clear Sky", icon: "01d")])
         mockWeatherService.weatherResponse = weatherResponse
 
-        viewModel.fetchWeather(for: "Test City")
+        viewModel.fetchWeather(for: "New City")
 
-        XCTAssertEqual(viewModel.cityName, "Test City")
+        XCTAssertEqual(viewModel.cityName, "New City")
         XCTAssertEqual(viewModel.temperature, "25.0°F")
         XCTAssertEqual(viewModel.weatherDescription, "Clear Sky")
         XCTAssertEqual(viewModel.weatherIcon, "01d")

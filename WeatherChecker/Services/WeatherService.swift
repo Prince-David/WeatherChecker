@@ -34,10 +34,12 @@ class WeatherService : WeatherServiceProtocol {
     }
     
     func fetchWeather(for city: String, completion: @escaping (Result<WeatherResponse, WeatherError>) -> Void) {
+        
         guard let apiKey = apiKey else {
             completion(.failure(.apiKeyMissing))
             return
         }
+        
         let parameters: [String: Any] = [
             "q": city,
             "appid": apiKey,
