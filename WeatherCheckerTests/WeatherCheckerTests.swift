@@ -63,8 +63,8 @@ final class WeatherCheckerTests: XCTestCase {
         XCTAssertEqual(response?.main.temp, 66.78)
         XCTAssertEqual(response?.name, "Holbrook")
         XCTAssertEqual(response?.weather.count, 1)
-        XCTAssertEqual(response?.weather[0].icon, "04d")
-        XCTAssertEqual(response?.weather[0].description, "overcast clouds")
+        XCTAssertEqual(response?.weather.first?.icon, "04d")
+        XCTAssertEqual(response?.weather.first?.description, "overcast clouds")
     }
     
 }
