@@ -80,11 +80,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
     
     @IBAction func touchCurrentLocation(_ sender: Any) {
         if let city = currentCity {
+            //Call fetch weather on the currentCity fetched from CoreLocation
             viewModel.fetchWeather(for: city)
         } else {
+            shouldProcessLocationUpdates = true
             // Request permission
             locationManager.requestWhenInUseAuthorization()
-            shouldProcessLocationUpdates = true
             // If authorized, get location
             if locationManager.authorizationStatus == .authorizedWhenInUse {
                 //Force a location update when authorized
@@ -141,6 +142,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
                 self?.viewModel.fetchWeather(for: city)
                 self?.currentCity = city
                 self?.locationManager.stopUpdatingLocation()
+                self?.shouldProcessLocationUpdates = false
             }
         }
     }
