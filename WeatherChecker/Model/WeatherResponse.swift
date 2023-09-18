@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+//In all models just retrieving relevant simple data to show the user
 struct WeatherResponse: Codable {
     let name: String
     let main: Main
