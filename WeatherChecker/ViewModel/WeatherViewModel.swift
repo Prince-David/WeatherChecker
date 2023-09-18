@@ -27,9 +27,9 @@ class WeatherViewModel {
         weatherService.fetchWeather(for: city) { [weak self] result in
             switch result {
             case .success(let weatherResponse):
-                self?.cityName = weatherResponse.name
+                self?.cityName = "Weather for " + weatherResponse.name
                 self?.temperature = "\(weatherResponse.main.temp)°F"
-                self?.weatherDescription = weatherResponse.weather.first?.description
+                self?.weatherDescription = weatherResponse.weather.first?.description.capitalized
                 self?.weatherIcon = weatherResponse.weather.first?.icon
                 
                 // Inform the WeatherViewController that the data is ready for display

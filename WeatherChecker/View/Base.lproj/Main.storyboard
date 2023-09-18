@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8x-Lt-9M4">
-                                <rect key="frame" x="30.000000000000007" y="79" width="79.666666666666686" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Checker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8x-Lt-9M4">
+                                <rect key="frame" x="30" y="79" width="132" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPZ-sx-PZO">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPZ-sx-PZO">
                                 <rect key="frame" x="30" y="109" width="200" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="kYE-Ms-iQd"/>
@@ -43,6 +43,24 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Use Current Location"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather for City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8w-XI-aAi">
+                                <rect key="frame" x="30" y="192" width="124" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLJ-G5-bVm">
+                                <rect key="frame" x="30" y="214" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zuj-mF-L3N">
+                                <rect key="frame" x="30" y="236" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -50,19 +68,29 @@
                             <constraint firstItem="fUk-ei-xoM" firstAttribute="bottom" secondItem="wPZ-sx-PZO" secondAttribute="bottom" id="1sO-3W-iRz"/>
                             <constraint firstItem="fUk-ei-xoM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="7Yq-f0-fX5"/>
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BeY-hZ-L8j"/>
+                            <constraint firstItem="t8w-XI-aAi" firstAttribute="leading" secondItem="yrv-qe-qye" secondAttribute="leading" id="CmI-qT-n5s"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="top" secondItem="wPZ-sx-PZO" secondAttribute="bottom" constant="5" id="F9s-t1-jAI"/>
+                            <constraint firstItem="YLJ-G5-bVm" firstAttribute="top" secondItem="t8w-XI-aAi" secondAttribute="bottom" constant="1.6666666666666572" id="Hbl-0M-2gb"/>
                             <constraint firstItem="C8x-Lt-9M4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="I0o-Uk-84r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yrv-qe-qye" secondAttribute="trailing" symbolic="YES" id="NyN-IT-tRP"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SHj-iY-Gx6"/>
                             <constraint firstItem="C8x-Lt-9M4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SNu-iy-Fr8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fUk-ei-xoM" secondAttribute="trailing" symbolic="YES" id="U1H-t0-SCh"/>
+                            <constraint firstItem="Zuj-mF-L3N" firstAttribute="top" secondItem="YLJ-G5-bVm" secondAttribute="bottom" constant="1" id="VjA-tb-T5D"/>
+                            <constraint firstItem="yrv-qe-qye" firstAttribute="width" secondItem="wPZ-sx-PZO" secondAttribute="width" multiplier="0.928333" id="XRj-KF-zBB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C8x-Lt-9M4" secondAttribute="trailing" symbolic="YES" id="kvq-d4-CvO"/>
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="top" secondItem="C8x-Lt-9M4" secondAttribute="bottom" constant="10" id="nuo-Ua-mPH"/>
+                            <constraint firstItem="t8w-XI-aAi" firstAttribute="top" secondItem="yrv-qe-qye" secondAttribute="bottom" constant="8" symbolic="YES" id="rTv-ye-Kly"/>
                             <constraint firstItem="fUk-ei-xoM" firstAttribute="centerY" secondItem="wPZ-sx-PZO" secondAttribute="centerY" id="uf1-Sq-xvh"/>
+                            <constraint firstItem="YLJ-G5-bVm" firstAttribute="leading" secondItem="t8w-XI-aAi" secondAttribute="leading" id="wSm-Uy-deG"/>
                             <constraint firstItem="fUk-ei-xoM" firstAttribute="leading" secondItem="wPZ-sx-PZO" secondAttribute="trailing" constant="22" id="wgR-Xa-PVt"/>
+                            <constraint firstItem="Zuj-mF-L3N" firstAttribute="leading" secondItem="YLJ-G5-bVm" secondAttribute="leading" id="xOY-Vb-48F"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblCity" destination="t8w-XI-aAi" id="dyP-rM-8BH"/>
+                        <outlet property="lblConditions" destination="Zuj-mF-L3N" id="oGb-aQ-QIi"/>
+                        <outlet property="lblTemp" destination="YLJ-G5-bVm" id="X3D-5G-GIz"/>
                         <outlet property="txtCity" destination="wPZ-sx-PZO" id="nY1-hK-jET"/>
                     </connections>
                 </viewController>

@@ -8,11 +8,24 @@
 import Foundation
 import Alamofire
 
-enum WeatherError: Error {
+enum WeatherError: LocalizedError {
     case networkError
     case decodingError
     case apiKeyMissing
     case other(Error)
+    
+    var errorDescription: String? {
+        switch self {
+        case .networkError:
+            return "There was an error connecting to the network. Please try again."
+        case .decodingError:
+            return "There was an error decoding the weather data. Please try again."
+        case .apiKeyMissing:
+            return "API key is missing. Please check your configuration."
+        case .other(let error):
+            return error.localizedDescription
+        }
+    }
 }
 
 protocol WeatherServiceProtocol {
