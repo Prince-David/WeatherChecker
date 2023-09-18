@@ -7,5 +7,6 @@ target 'WeatherChecker' do
 
   # Pods for WeatherChecker
   pod 'Alamofire'
+  pod 'SDWebImage', '~> 5.0'
 
 end
