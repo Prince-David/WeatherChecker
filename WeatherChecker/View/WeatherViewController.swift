@@ -79,6 +79,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             lblWind.text = ""
             viewModel.fetchWeather(for: city)
             txtCity.text = ""
+            imgWeather.image = nil
         }
     }
     
