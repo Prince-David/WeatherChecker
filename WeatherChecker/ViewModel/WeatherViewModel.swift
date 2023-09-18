@@ -11,10 +11,12 @@ class WeatherViewModel {
     
     private var weatherService: WeatherServiceProtocol
     
+    //There is more data we could display but for now we are keeping it simple
     var cityName: String?
     var temperature: String?
     var weatherDescription: String?
     var weatherIcon: String?
+    var windSpeed: String?
     
     var didUpdateWeather: (() -> Void)?
     var didEncounterError: ((WeatherError) -> Void)?
@@ -32,8 +34,10 @@ class WeatherViewModel {
                 self?.temperature = "\(weatherResponse.main.temp)°F"
                 self?.weatherDescription = weatherResponse.weather.first?.description.capitalized
                 self?.weatherIcon = weatherResponse.weather.first?.icon
+                self?.windSpeed = "Wind \(weatherResponse.wind.speed) mph"
+                //Store the last successfully searched for city
                 UserDefaults.standard.set(city, forKey: "lastSearchedCity")
-                print(UserDefaults.standard.string(forKey: "lastSearchedCity"))
+                
                 // Inform the WeatherViewController that the data is ready for display
                 self?.didUpdateWeather?()
                 

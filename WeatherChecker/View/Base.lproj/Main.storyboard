@@ -68,6 +68,12 @@
                                     <constraint firstAttribute="width" constant="75" id="lwT-ce-9eu"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-QB-Te6">
+                                <rect key="frame" x="30" y="255" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -80,6 +86,7 @@
                             <constraint firstItem="zfJ-VA-IYW" firstAttribute="top" secondItem="fUk-ei-xoM" secondAttribute="bottom" constant="40" id="GnW-B5-ghe"/>
                             <constraint firstItem="YLJ-G5-bVm" firstAttribute="top" secondItem="t8w-XI-aAi" secondAttribute="bottom" constant="1.6666666666666572" id="Hbl-0M-2gb"/>
                             <constraint firstItem="C8x-Lt-9M4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="I0o-Uk-84r"/>
+                            <constraint firstItem="vDg-QB-Te6" firstAttribute="top" secondItem="Zuj-mF-L3N" secondAttribute="bottom" constant="-2.3333333333333712" id="NUm-KG-hRa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yrv-qe-qye" secondAttribute="trailing" symbolic="YES" id="NyN-IT-tRP"/>
                             <constraint firstItem="zfJ-VA-IYW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t8w-XI-aAi" secondAttribute="trailing" constant="8" symbolic="YES" id="S4e-6W-bpQ"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SHj-iY-Gx6"/>
@@ -90,6 +97,7 @@
                             <constraint firstItem="yrv-qe-qye" firstAttribute="width" secondItem="wPZ-sx-PZO" secondAttribute="width" multiplier="0.928333" id="XRj-KF-zBB"/>
                             <constraint firstItem="zfJ-VA-IYW" firstAttribute="leading" secondItem="fUk-ei-xoM" secondAttribute="leading" id="cCn-B9-UbU"/>
                             <constraint firstItem="zfJ-VA-IYW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zuj-mF-L3N" secondAttribute="trailing" constant="8" symbolic="YES" id="i40-cb-JVH"/>
+                            <constraint firstItem="vDg-QB-Te6" firstAttribute="leading" secondItem="Zuj-mF-L3N" secondAttribute="leading" id="kft-i6-1rb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C8x-Lt-9M4" secondAttribute="trailing" symbolic="YES" id="kvq-d4-CvO"/>
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="top" secondItem="C8x-Lt-9M4" secondAttribute="bottom" constant="10" id="nuo-Ua-mPH"/>
                             <constraint firstItem="t8w-XI-aAi" firstAttribute="top" secondItem="yrv-qe-qye" secondAttribute="bottom" constant="8" symbolic="YES" id="rTv-ye-Kly"/>
@@ -104,6 +112,7 @@
                         <outlet property="lblCity" destination="t8w-XI-aAi" id="dyP-rM-8BH"/>
                         <outlet property="lblConditions" destination="Zuj-mF-L3N" id="oGb-aQ-QIi"/>
                         <outlet property="lblTemp" destination="YLJ-G5-bVm" id="X3D-5G-GIz"/>
+                        <outlet property="lblWind" destination="vDg-QB-Te6" id="4xF-l1-jFE"/>
                         <outlet property="txtCity" destination="wPZ-sx-PZO" id="nY1-hK-jET"/>
                     </connections>
                 </viewController>

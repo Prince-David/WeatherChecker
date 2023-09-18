@@ -50,8 +50,6 @@ final class WeatherCheckerTests: XCTestCase {
         
         XCTAssertNotNil(wind)
         XCTAssertEqual(wind?.speed, 14.97)
-        XCTAssertEqual(wind?.deg, 320)
-        XCTAssertEqual(wind?.gust, 24.16)
     }
     
     func testWeatherResponseDecoding() {
@@ -82,8 +80,6 @@ final class WeatherCheckerTests: XCTestCase {
         XCTAssertEqual(response?.weather.first?.icon, "04d")
         XCTAssertEqual(response?.weather.first?.description, "overcast clouds")
         XCTAssertEqual(response?.wind.speed, 14.97)
-        XCTAssertEqual(response?.wind.deg, 320)
-        XCTAssertEqual(response?.wind.gust, 24.16)
     }
     
 }

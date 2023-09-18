@@ -15,6 +15,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
     @IBOutlet weak var lblConditions: UILabel!
     @IBOutlet weak var imgWeather: UIImageView!
     @IBOutlet weak var txtCity: UITextField!
+    @IBOutlet weak var lblWind: UILabel!
     
     private var viewModel: WeatherViewModel!
     let locationManager = CLLocationManager()
@@ -32,6 +33,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         lblCity.text = ""
         lblTemp.text = ""
         lblConditions.text = ""
+        lblWind.text = ""
         
         viewModel = WeatherViewModel(weatherService: WeatherService())
         
@@ -40,6 +42,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             self?.lblCity.text = self?.viewModel.cityName ?? ""
             self?.lblTemp.text = self?.viewModel.temperature ?? ""
             self?.lblConditions.text = self?.viewModel.weatherDescription ?? ""
+            self?.lblWind.text = self?.viewModel.windSpeed ?? ""
             if let img = self?.viewModel.weatherIcon {
                 let imageUrl = "https://openweathermap.org/img/wn/" + img + "@2x.png"
                 self?.imgWeather.sd_imageIndicator = SDWebImageActivityIndicator.white
@@ -73,6 +76,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             lblCity.text = ""
             lblTemp.text = ""
             lblConditions.text = ""
+            lblWind.text = ""
             viewModel.fetchWeather(for: city)
             txtCity.text = ""
         }
