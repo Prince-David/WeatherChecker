@@ -7,23 +7,26 @@
 
 import UIKit
 import SDWebImage
+import CoreLocation
 
-class WeatherViewController: UIViewController, UITextFieldDelegate {
+class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     @IBOutlet weak var lblConditions: UILabel!
-    
     @IBOutlet weak var imgWeather: UIImageView!
     @IBOutlet weak var txtCity: UITextField!
-    private var viewModel: WeatherViewModel!
     
+    private var viewModel: WeatherViewModel!
+    let locationManager = CLLocationManager()
+    var currentCity: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.delegate = self
         txtCity.delegate = self
         
-        //Setup text fields
+        //Setup label fields
         lblCity.text = ""
         lblTemp.text = ""
         lblConditions.text = ""
@@ -70,6 +73,20 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func touchCurrentLocation(_ sender: Any) {
+        if let city = currentCity {
+            viewModel.fetchWeather(for: city)
+        } else {
+            // Request permission
+            locationManager.requestWhenInUseAuthorization()
+            
+            // If authorized, get location
+            if locationManager.authorizationStatus == .authorizedWhenInUse {
+                locationManager.startUpdatingLocation()
+            }
+        }
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -78,6 +95,44 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // Delegate method when locations are updated
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            determineCity(from: location)
+        }
+    }
+    
+    // Delegate method when location request fails
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        showErrorAlert(withMessage: "Failed to get location: \(error.localizedDescription)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            manager.startUpdatingLocation()
+        @unknown default:
+            break
+        }
+    }
+    
+    func determineCity(from location: CLLocation) {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
+            if let error = error {
+                DispatchQueue.main.async {
+                    self?.showErrorAlert(withMessage: "Failed to determine city: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let placemark = placemarks?.first, let city = placemark.locality {
+                self?.viewModel.fetchWeather(for: city)
+                self?.currentCity = city
+                
+            }
+        }
     }
     
 }

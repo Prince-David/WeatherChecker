@@ -42,6 +42,9 @@
                                 <rect key="frame" x="30" y="149" width="185.66666666666666" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Use Current Location"/>
+                                <connections>
+                                    <action selector="touchCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iS3-A8-HvX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather for City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8w-XI-aAi">
                                 <rect key="frame" x="30" y="192" width="124" height="20.333333333333343"/>
