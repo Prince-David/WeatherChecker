@@ -9,8 +9,7 @@ Sign in or create a free account.
 Generate your API key.
 
 Add Config.plist:
-In the project directory, Resources group, create a new Property List file named Config.plist.
-Open Config.plist in Xcode or your preferred Plist editor.
+In the project on XCode, Resources group, create a new Property List file named Config.plist.
 Add a new entry with a key named OpenWeatherAPIKey.
 Set the value of the OpenWeatherAPIKey entry to your API key obtained from OpenWeatherMap.
 
