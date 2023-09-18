@@ -61,6 +61,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zfJ-VA-IYW">
+                                <rect key="frame" x="252" y="184" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="bn0-ez-RcK"/>
+                                    <constraint firstAttribute="width" constant="75" id="lwT-ce-9eu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
@@ -70,6 +77,7 @@
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BeY-hZ-L8j"/>
                             <constraint firstItem="t8w-XI-aAi" firstAttribute="leading" secondItem="yrv-qe-qye" secondAttribute="leading" id="CmI-qT-n5s"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="top" secondItem="wPZ-sx-PZO" secondAttribute="bottom" constant="5" id="F9s-t1-jAI"/>
+                            <constraint firstItem="zfJ-VA-IYW" firstAttribute="top" secondItem="fUk-ei-xoM" secondAttribute="bottom" constant="40" id="GnW-B5-ghe"/>
                             <constraint firstItem="YLJ-G5-bVm" firstAttribute="top" secondItem="t8w-XI-aAi" secondAttribute="bottom" constant="1.6666666666666572" id="Hbl-0M-2gb"/>
                             <constraint firstItem="C8x-Lt-9M4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="I0o-Uk-84r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yrv-qe-qye" secondAttribute="trailing" symbolic="YES" id="NyN-IT-tRP"/>
@@ -78,6 +86,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fUk-ei-xoM" secondAttribute="trailing" symbolic="YES" id="U1H-t0-SCh"/>
                             <constraint firstItem="Zuj-mF-L3N" firstAttribute="top" secondItem="YLJ-G5-bVm" secondAttribute="bottom" constant="1" id="VjA-tb-T5D"/>
                             <constraint firstItem="yrv-qe-qye" firstAttribute="width" secondItem="wPZ-sx-PZO" secondAttribute="width" multiplier="0.928333" id="XRj-KF-zBB"/>
+                            <constraint firstItem="zfJ-VA-IYW" firstAttribute="leading" secondItem="fUk-ei-xoM" secondAttribute="leading" id="cCn-B9-UbU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C8x-Lt-9M4" secondAttribute="trailing" symbolic="YES" id="kvq-d4-CvO"/>
                             <constraint firstItem="wPZ-sx-PZO" firstAttribute="top" secondItem="C8x-Lt-9M4" secondAttribute="bottom" constant="10" id="nuo-Ua-mPH"/>
                             <constraint firstItem="t8w-XI-aAi" firstAttribute="top" secondItem="yrv-qe-qye" secondAttribute="bottom" constant="8" symbolic="YES" id="rTv-ye-Kly"/>
@@ -88,6 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgWeather" destination="zfJ-VA-IYW" id="l1E-3C-ZWh"/>
                         <outlet property="lblCity" destination="t8w-XI-aAi" id="dyP-rM-8BH"/>
                         <outlet property="lblConditions" destination="Zuj-mF-L3N" id="oGb-aQ-QIi"/>
                         <outlet property="lblTemp" destination="YLJ-G5-bVm" id="X3D-5G-GIz"/>

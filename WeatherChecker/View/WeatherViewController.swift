@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WeatherViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     @IBOutlet weak var lblConditions: UILabel!
     
+    @IBOutlet weak var imgWeather: UIImageView!
     @IBOutlet weak var txtCity: UITextField!
     private var viewModel: WeatherViewModel!
     
@@ -30,6 +32,11 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
             self?.lblCity.text = self?.viewModel.cityName ?? ""
             self?.lblTemp.text = self?.viewModel.temperature ?? ""
             self?.lblConditions.text = self?.viewModel.weatherDescription ?? ""
+            if let img = self?.viewModel.weatherIcon {
+                let imageUrl = "https://openweathermap.org/img/wn/" + img + "@2x.png"
+                self?.imgWeather.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder"))
+            }
+
         }
         
         viewModel.didEncounterError = { [weak self] error in
