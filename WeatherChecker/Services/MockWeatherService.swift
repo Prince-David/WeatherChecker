@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Mock the Weather Service for use in unit testing
 class MockWeatherService: WeatherServiceProtocol {
     var shouldReturnError = false
     var weatherResponse: WeatherResponse?

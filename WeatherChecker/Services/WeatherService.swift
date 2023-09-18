@@ -46,6 +46,7 @@ class WeatherService : WeatherServiceProtocol {
         return nil
     }
     
+    //Call the weather service and get results back in imperial units
     func fetchWeather(for city: String, completion: @escaping (Result<WeatherResponse, WeatherError>) -> Void) {
         
         guard let apiKey = apiKey else {

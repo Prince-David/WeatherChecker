@@ -23,11 +23,14 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         
         txtCity.delegate = self
         
+        //Setup text fields
         lblCity.text = ""
         lblTemp.text = ""
         lblConditions.text = ""
+        
         viewModel = WeatherViewModel(weatherService: WeatherService())
         
+        //Assign functions for receiving data or error from the WeatherService
         viewModel.didUpdateWeather = { [weak self] in
             self?.lblCity.text = self?.viewModel.cityName ?? ""
             self?.lblTemp.text = self?.viewModel.temperature ?? ""
@@ -37,9 +40,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
                 self?.imgWeather.sd_imageIndicator = SDWebImageActivityIndicator.white
                 self?.imgWeather.sd_setImage(with: URL(string: imageUrl))
             }
-
         }
-        
         viewModel.didEncounterError = { [weak self] error in
             DispatchQueue.main.async {
                 self?.showErrorAlert(withMessage: error.localizedDescription)

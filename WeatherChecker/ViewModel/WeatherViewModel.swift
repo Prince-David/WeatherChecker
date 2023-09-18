@@ -27,6 +27,7 @@ class WeatherViewModel {
         weatherService.fetchWeather(for: city) { [weak self] result in
             switch result {
             case .success(let weatherResponse):
+                //Format the text for use in the UI
                 self?.cityName = "Weather for " + weatherResponse.name
                 self?.temperature = "\(weatherResponse.main.temp)°F"
                 self?.weatherDescription = weatherResponse.weather.first?.description.capitalized
