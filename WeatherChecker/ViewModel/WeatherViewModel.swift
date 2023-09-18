@@ -32,7 +32,8 @@ class WeatherViewModel {
                 self?.temperature = "\(weatherResponse.main.temp)°F"
                 self?.weatherDescription = weatherResponse.weather.first?.description.capitalized
                 self?.weatherIcon = weatherResponse.weather.first?.icon
-                
+                UserDefaults.standard.set(city, forKey: "lastSearchedCity")
+                print(UserDefaults.standard.string(forKey: "lastSearchedCity"))
                 // Inform the WeatherViewController that the data is ready for display
                 self?.didUpdateWeather?()
                 

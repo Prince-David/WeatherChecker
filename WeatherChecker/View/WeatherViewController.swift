@@ -19,6 +19,8 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
     private var viewModel: WeatherViewModel!
     let locationManager = CLLocationManager()
     var currentCity: String?
+    var shouldProcessLocationUpdates = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
+        if let lastCity = UserDefaults.standard.string(forKey: "lastSearchedCity") {
+            viewModel.fetchWeather(for: lastCity)
+        }
     }
     
     func showErrorAlert(withMessage message: String) {
@@ -79,9 +84,11 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         } else {
             // Request permission
             locationManager.requestWhenInUseAuthorization()
-            
+            shouldProcessLocationUpdates = true
             // If authorized, get location
             if locationManager.authorizationStatus == .authorizedWhenInUse {
+                //Force a location update when authorized
+                locationManager.stopUpdatingLocation()
                 locationManager.startUpdatingLocation()
             }
         }
@@ -99,6 +106,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
     
     // Delegate method when locations are updated
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        //Don't process location updates when first starting app, wait until button pressed
+        guard shouldProcessLocationUpdates else { return }
+        
         if let location = locations.last {
             determineCity(from: location)
         }
@@ -130,7 +140,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             if let placemark = placemarks?.first, let city = placemark.locality {
                 self?.viewModel.fetchWeather(for: city)
                 self?.currentCity = city
-                
+                self?.locationManager.stopUpdatingLocation()
             }
         }
     }
