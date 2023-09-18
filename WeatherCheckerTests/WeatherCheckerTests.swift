@@ -38,6 +38,22 @@ final class WeatherCheckerTests: XCTestCase {
         XCTAssertEqual(main?.temp, 33.15)
     }
     
+    func testWindDecoding() {
+        let jsonData = """
+            {
+                "speed": 14.97,
+                "deg": 320,
+                "gust": 24.16
+            }
+            """.data(using: .utf8)!
+        let wind = try? JSONDecoder().decode(Wind.self, from: jsonData)
+        
+        XCTAssertNotNil(wind)
+        XCTAssertEqual(wind?.speed, 14.97)
+        XCTAssertEqual(wind?.deg, 320)
+        XCTAssertEqual(wind?.gust, 24.16)
+    }
+    
     func testWeatherResponseDecoding() {
         let jsonData = """
            {
@@ -65,6 +81,9 @@ final class WeatherCheckerTests: XCTestCase {
         XCTAssertEqual(response?.weather.count, 1)
         XCTAssertEqual(response?.weather.first?.icon, "04d")
         XCTAssertEqual(response?.weather.first?.description, "overcast clouds")
+        XCTAssertEqual(response?.wind.speed, 14.97)
+        XCTAssertEqual(response?.wind.deg, 320)
+        XCTAssertEqual(response?.wind.gust, 24.16)
     }
     
 }

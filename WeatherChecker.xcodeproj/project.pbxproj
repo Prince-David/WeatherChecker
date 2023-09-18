@@ -16,6 +16,7 @@
 		0313AD842AB6799100C30CFE /* MockWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD832AB6799100C30CFE /* MockWeatherService.swift */; };
 		0313AD862AB679EA00C30CFE /* WeatherViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313AD852AB679EA00C30CFE /* WeatherViewModelTests.swift */; };
 		033E702D2AB80BD9009E8801 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033E702C2AB80BD9009E8801 /* CoreLocation.framework */; };
+		033E702F2AB81E3B009E8801 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033E702E2AB81E3B009E8801 /* Wind.swift */; };
 		0356D3DC2AB1BB7F00E5E27B /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0356D3DB2AB1BB7F00E5E27B /* Config.plist */; };
 		03A86F7E2AB1A461008CCAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */; };
 		03A86F802AB1A461008CCAF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A86F7F2AB1A461008CCAF7 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		0313AD832AB6799100C30CFE /* MockWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherService.swift; sourceTree = "<group>"; };
 		0313AD852AB679EA00C30CFE /* WeatherViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModelTests.swift; sourceTree = "<group>"; };
 		033E702C2AB80BD9009E8801 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		033E702E2AB81E3B009E8801 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		0356D3DB2AB1BB7F00E5E27B /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		03A86F7A2AB1A461008CCAF7 /* WeatherChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A86F7D2AB1A461008CCAF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				0313AD762AB6051300C30CFE /* Weather.swift */,
 				0313AD782AB6053200C30CFE /* Main.swift */,
 				0313AD7A2AB6056F00C30CFE /* WeatherResponse.swift */,
+				033E702E2AB81E3B009E8801 /* Wind.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0313AD842AB6799100C30CFE /* MockWeatherService.swift in Sources */,
+				033E702F2AB81E3B009E8801 /* Wind.swift in Sources */,
 				0313AD792AB6053200C30CFE /* Main.swift in Sources */,
 				0313AD7B2AB6056F00C30CFE /* WeatherResponse.swift in Sources */,
 				0313AD772AB6051300C30CFE /* Weather.swift in Sources */,

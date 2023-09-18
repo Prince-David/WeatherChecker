@@ -20,7 +20,7 @@ class WeatherViewModelTests: XCTestCase {
     }
 
     func testFetchWeatherSuccess() {
-        let weatherResponse = WeatherResponse(name: "New City", main: Main(temp: 25.0), weather: [Weather(description: "Clear Sky", icon: "01d")])
+        let weatherResponse = WeatherResponse(name: "New City", main: Main(temp: 25.0), weather: [Weather(description: "Clear Sky", icon: "01d")], wind: Wind(speed: 10.0, deg: 1, gust: 13.0))
         mockWeatherService.weatherResponse = weatherResponse
 
         viewModel.fetchWeather(for: "New City")

@@ -10,4 +10,5 @@ struct WeatherResponse: Codable {
     let name: String
     let main: Main
     let weather: [Weather]
+    let wind: Wind
 }

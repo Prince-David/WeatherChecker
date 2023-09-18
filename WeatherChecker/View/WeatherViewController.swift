@@ -129,6 +129,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         }
     }
     
+    //Get the current city and perform a search for its weather
     func determineCity(from location: CLLocation) {
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { [weak self] (placemarks, error) in
