@@ -1,5 +1,6 @@
 # WeatherChecker
-Configuration
+Configuration:
+
 To get the app up and running on your local machine, you'll need to add a configuration file with your OpenWeather API key. Follow these steps:
 
 Obtain an API Key:
