@@ -34,7 +34,8 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
             self?.lblConditions.text = self?.viewModel.weatherDescription ?? ""
             if let img = self?.viewModel.weatherIcon {
                 let imageUrl = "https://openweathermap.org/img/wn/" + img + "@2x.png"
-                self?.imgWeather.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "placeholder"))
+                self?.imgWeather.sd_imageIndicator = SDWebImageActivityIndicator.white
+                self?.imgWeather.sd_setImage(with: URL(string: imageUrl))
             }
 
         }
