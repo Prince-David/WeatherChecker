@@ -14,7 +14,4 @@ Open Config.plist in Xcode or your preferred Plist editor.
 Add a new entry with a key named OpenWeatherAPIKey.
 Set the value of the OpenWeatherAPIKey entry to your API key obtained from OpenWeatherMap.
 
-Make Sure Config.plist is in the Correct Directory:
-Ensure that Config.plist is located in the root directory of the project or adjust the path where the app expects to find it.
-
 ⚠️ Important: Do not commit Config.plist to any public repository. This file contains your private API key. The .gitignore file in this repository has already been set up to ignore Config.plist to prevent accidental commits.
