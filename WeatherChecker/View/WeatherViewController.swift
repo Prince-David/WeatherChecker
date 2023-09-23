@@ -129,7 +129,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
             manager.startUpdatingLocation()
-        @unknown default:
+        default:
             break
         }
     }

@@ -61,7 +61,7 @@ class WeatherService : WeatherServiceProtocol {
         ]
         
         AF.request(baseURL, method: .get, parameters: parameters).validate().responseDecodable(of: WeatherResponse.self) { response in
-            if let error = response.error {
+            if response.error != nil {
                 completion(.failure(.networkError))
             } else {
                 do {
