@@ -50,9 +50,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             }
         }
         viewModel.didEncounterError = { [weak self] error in
-            
             self?.showErrorAlert(withMessage: error.localizedDescription)
-            
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -77,9 +75,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             lblTemp.text = ""
             lblConditions.text = ""
             lblWind.text = ""
-            viewModel.fetchWeather(for: city)
             txtCity.text = ""
             imgWeather.image = nil
+            viewModel.fetchWeather(for: city)
         }
     }
     
