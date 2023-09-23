@@ -21,7 +21,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
     let locationManager = CLLocationManager()
     var currentCity: String?
     var shouldProcessLocationUpdates = false
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +50,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, CLLocationMa
             }
         }
         viewModel.didEncounterError = { [weak self] error in
-            DispatchQueue.main.async {
-                self?.showErrorAlert(withMessage: error.localizedDescription)
-            }
+            
+            self?.showErrorAlert(withMessage: error.localizedDescription)
+            
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
